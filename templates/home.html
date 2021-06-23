@@ -5,9 +5,22 @@
 {% endblock %}
 
 {% block content %}
-    <h3>Welcome to Wikipedia Speedruns!</h3>
+<body>
+<div class="sidebar">
+    <a href="">Home</a>
+    <a href="">Random Prompt</a>
+    <a href="">Newest Prompt</a>
+    <a href="">All Prompts</a>
+    <a href="">Achievements</a>
+    <a href="">Leaderboards</a>
+</div>
 
-    <p>Goal of this game is simple. Try to get to one wikipedia page to another as fast as possible by clicking on the links in the page. </p>
+<div class="pageContent">
+    <div class="banner"><h3>Welcome to Wikipedia Speedruns!</h3>
+    </div>
+    
+    <div id="instructions">
+        <p>Goal of this game is simple. Try to get to one wikipedia page to another as fast as possible by clicking on the links in the page. </p>
     <p>A few simple rules apply:<br>
         <ul>
             <li>Any link shown on the page is fair game.</li>
@@ -16,13 +29,28 @@
             <li>Luck is king, so put on your lucky hat and lucky socks!</li>
         </ul>
     </p>
+    </div>
 
-    <p>Click <a href="/latest">here</a> to try the latest prompt, starts immediately after click!</p>
-    <p>Click <a href="/random">here</a> to try a random prompt, starts immediately after click!</p>
+    <!-- <div id="prompt_container_1">
+        <div id="latest_prompt" class="prompt_box">
+            <a href="/latest">
+            <p>Click here to try the latest prompt, starts immediately after click!</p>
+            </a>
+        </div>
+        <div id="random_prompt" class="prompt_box">
+            <a href="/random">
+            <p>Click here to try a random prompt, starts immediately after click!</p>
+            </a>
+        </div>
+    </div>
     
-    <p>Here are links to all available prompts:</p>
-    <table id="prompts">
-    </table>
+    <div id="prompt_container_2">
+        <p>Here are links to all available prompts:</p>
+        <table id="prompts">
+        </table>
+    </div> -->
 
     <p>Created by <a href="https://danqian.net">Daniel Qian</a> and <a href="https://mliu59.github.io/">Miles Liu</a></p>
+</div>
+</body>
 {% endblock %}

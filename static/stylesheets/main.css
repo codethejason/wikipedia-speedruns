@@ -1,9 +1,17 @@
-
+:root {
+    --mainColor: #F67FE0;
+    --secondaryColor: #DCDCDC;
+    --tertiaryColor: #7B0355;
+    --backgroundColor: #464646;
+    --hoverColor: #BFBFBF;
+    --textColor: #000000;
+}
 body {
-    width: 80%;
+    /* width: 80%; */
     max-width: 1500px !important;
     margin: 40px auto !important;
     font-size: 18px;
+    background-color: var(--backgroundColor);
     /*font-family: Arial, sans-serif;*/
 }
 
@@ -78,4 +86,167 @@ th {
     margin: 50px auto;
     text-align: center;
     font-size: 30px;
+}
+/* Background Image */
+/* body {
+    margin: auto;
+    height: 100%;
+    background-image: url('/static/stylesheets/wordcloud.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+} */
+/* Nav Bar Formatting */
+nav {
+    background-color: var(--mainColor);
+    text-align: right;
+    margin: auto;
+    width: 80%;
+    padding: 8px 8px 8px 8px;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    overflow: visible;
+}
+
+#logout {
+    background-color: var(--secondaryColor);
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #DC74C9 #C96BB8 #C96BB8 #DC74C9;
+}
+#logout:hover {
+    background-color: var(--hoverColor);
+    transition: background-color .10s ease-in-out;
+    border-style: solid;
+    border-color: #C96BB8 #DC74C9 #DC74C9 #C96BB8;
+}
+/* Side Bar */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    width: 200px;
+    background-color: var(--mainColor);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    /* z-index: 9; */
+  }
+  .sidebar a {
+    display: block;
+    color: var(--textColor);
+    padding: 16px;
+    text-decoration: none;
+  }
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.pageContent {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 100%;
+  }
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+/* Home page adjustments */
+.banner {
+    background-color: var(--tertiaryColor);
+    margin-top: 50px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25;
+}
+#instructions {
+    background-color: var(--secondaryColor);
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 8px;
+}
+#prompt_container_1 {
+    margin: auto;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#prompt_container_1 p {
+    border-radius: 8px;
+    background-color: var(--secondaryColor);
+    width: 45%;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--mainColor);
+}
+#prompt_container_1 p:hover {
+    color:black;
+    background-color: var(--hoverColor);
+    transition: background-color .5s ease-in-out;
+}
+#latest_prompt {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+/* #latest_prompt:hover {
+    color:black;
+    background-color: #BFBFBF;
+    transition: background-color .5s ease-in-out;
+} */
+#random_prompt {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+/* #random_prompt:hover {
+    color:black;
+    background-color: #BFBFBF;
+    transition: background-color .5s ease-in-out;
+} */
+#prompt_container_2 {
+    margin: auto;
+    background-color: var(--hoverColor);
+    border-radius: 8px;
+    border: var(--mainColor);
+}
+#prompts th {
+    background-color: var(--mainColor);
+}
+#prompts tr {
+    background-color: #ffffff;
+}
+#prompts tr:nth-child(even) {
+    background-color: var(--secondaryColor);
+}
+#prompts tr:hover {
+    background-color: var(--hoverColor);
 }
